@@ -108,115 +108,142 @@ const useCaseCategories = [
   {
     id: 'business-ops',
     name: '🏢 Business Operations',
-    mentions: 18,
-    description: 'Running companies, ERP systems, company-wide automation',
-    quotes: [
-      { user: 'egenaess', text: "Running it on a dedicated Mac 24/7 for my investment company (~$10M AUM). It has its own Gmail account and acts as a junior analyst.", likes: 97 },
-      { user: 'BrianRoyBarber', text: "Running my entire auto parts distribution company through it. Daily morning briefs with sales data, weather for our warehouses, calendar. Building a full ERP with it.", likes: 4 },
-      { user: '_mrbaywatch', text: "About 70% of my work is done by Clawdbot now. It does all my accounting, analyzes company data, creates employee salaries, daily reports.", likes: 12 },
-      { user: 'eliaseffects', text: "it runs my entire agency. morning briefs, writes & schedules content based on my code commits, monitors server health.", likes: 6 },
+    icon: '🏢',
+    useCases: [
+      { text: 'Running $10M AUM investment company — agent acts as junior analyst with own Gmail', user: 'egenaess', likes: 97 },
+      { text: 'Auto parts distribution: daily briefs, sales data, weather, building full ERP', user: 'BrianRoyBarber', likes: 4 },
+      { text: '70% of work automated: accounting, employee salaries, daily reports', user: '_mrbaywatch', likes: 12 },
+      { text: 'Runs entire agency: morning briefs, content scheduling, server monitoring', user: 'eliaseffects', likes: 6 },
+      { text: 'VC fund CRM: manages startup pitches, portfolio companies, LP relations via Slack', user: 'bonam', likes: 1 },
+      { text: 'Butcher shop: content calendar, uploads to Airtable planner, post-analysis', user: 'ClintJolly', likes: 0 },
+      { text: 'Coffee shop: growth analysis, supplier orders, Sam\'s Club pickup cart prep', user: 'PedroAnibarro', likes: 0 },
     ],
   },
   {
     id: 'content-marketing',
     name: '📣 Content & Marketing',
-    mentions: 22,
-    description: 'Social media, content creation, newsletters, SEO',
-    quotes: [
-      { user: 'BradAI', text: "x engagement (monitoring mentions, replying to relevant convos), content research (searches web, summarizes articles)", likes: 8 },
-      { user: 'westoque', text: "running a marketing employee. it takes google analytics data from yesterday, creates a plan to increase traffic and execute.", likes: 0 },
-      { user: 'eliadeleo', text: "Every morning: feed it competitor content + our positioning → outputs 10 angles I'd never think of. Cuts content ideation from 2 hours to 15 mins.", likes: 1 },
-      { user: 'pors', text: "It searches daily multiple social media platforms for potential users. It manages my cold outreach list and drafts the text.", likes: 0 },
+    icon: '📣',
+    useCases: [
+      { text: 'X engagement: monitoring mentions, replying to relevant conversations', user: 'BradAI', likes: 8 },
+      { text: 'Marketing employee: analyzes Google Analytics daily, creates traffic plan, executes', user: 'westoque', likes: 0 },
+      { text: 'Content ideation: competitor content → 10 angles in 15 mins (was 2 hours)', user: 'eliadeleo', likes: 1 },
+      { text: 'Searches social media for potential users, manages cold outreach list', user: 'pors', likes: 0 },
+      { text: 'Personalized newsletter via AgentMail, daily video ideas, viral tweet research', user: 'tinkerersanky', likes: 3 },
+      { text: 'GenAI ads: script to video download, just edit the files', user: 'psekyaya', likes: 0 },
+      { text: 'Built a mini marketing team for personal brand', user: 'KeithKakadia', likes: 0 },
+      { text: 'Automated postings for marketing', user: 'songjiun980001', likes: 1 },
     ],
   },
   {
     id: 'email-comms',
-    name: '📧 Email & Communication',
-    mentions: 15,
-    description: 'Inbox management, drafting responses, email triage',
-    quotes: [
-      { user: 'BobWassermann', text: "Couple times a day email + WhatsApp cleanup and setting up draft responses.", likes: 5 },
-      { user: 'BradAI', text: "email triage (reads inbox, flags urgent stuff, drafts responses)", likes: 8 },
-      { user: 'UK_PROPDEV', text: "had it get my personal iCloud to inbox zero by filing or deleting everything. 2.6k emails to 0.", likes: 0 },
+    name: '📧 Email & Inbox',
+    icon: '📧',
+    useCases: [
+      { text: 'Email + WhatsApp cleanup twice daily, setting up draft responses', user: 'BobWassermann', likes: 5 },
+      { text: 'Email triage: reads inbox, flags urgent, drafts responses', user: 'BradAI', likes: 8 },
+      { text: 'iCloud inbox zero: filed or deleted 2,600 emails to 0', user: 'UK_PROPDEV', likes: 0 },
+      { text: 'Handling @agentmail is a banger!', user: 'PeterRosdahl', likes: 3 },
+      { text: 'Emails for RFQ requests and providing estimates to customers', user: 'CybrLou', likes: 0 },
     ],
   },
   {
     id: 'dev-coding',
-    name: '💻 Development & Coding',
-    mentions: 16,
-    description: 'Code review, debugging, PR creation, vibecoding',
-    quotes: [
-      { user: 'mc_elreath', text: "I assign tickets in Linear to it. It fires up a subagent to create a work tree and carries the ticket through to a clean PR.", likes: 0 },
-      { user: 'De_0O7', text: "Creating an army of web automation playwright agents that improves themselves autonomously", likes: 3 },
-      { user: 'AshExplained', text: "Creates PR on my github projects finding bugs or enhancements or new features as QOL", likes: 0 },
-      { user: 'fittdrday', text: "Handling simple code fixes overnight", likes: 0 },
+    name: '💻 Development',
+    icon: '💻',
+    useCases: [
+      { text: 'Assigns Linear tickets → subagent creates work tree → clean PR', user: 'mc_elreath', likes: 0 },
+      { text: 'Army of Playwright agents that improve themselves autonomously', user: 'De_0O7', likes: 3 },
+      { text: 'Creates PRs finding bugs, enhancements, QOL features', user: 'AshExplained', likes: 0 },
+      { text: 'Simple code fixes overnight', user: 'fittdrday', likes: 0 },
+      { text: 'Code review and debugging on large codebases', user: 'Hassankhaliif9', likes: 0 },
+      { text: 'Mock interview platform: automated code review, personalized feedback', user: 'praveenyen', likes: 2 },
+      { text: 'Mermaid + PlantUML diagrams in 2 minutes vs 3 hours of Visio', user: 'TechFocusedGeek', likes: 0 },
     ],
   },
   {
     id: 'sales-leads',
-    name: '🎯 Sales & Lead Gen',
-    mentions: 12,
-    description: 'Outreach, CRM, lead generation, prospecting',
-    quotes: [
-      { user: 'Clawburt', text: "Autonomous leadgen via Google Maps + X API. Personalized outreach (X + email), GPT-wrapped.", likes: 0 },
-      { user: 'tinkerersanky', text: "Finding leads on reddit and adding in Notion", likes: 3 },
-      { user: 'brandontan', text: "Lead gen for my ICP ... no more n8n", likes: 0 },
-      { user: 'radwanrahmann', text: "Highly targeted Lead Gen", likes: 0 },
+    name: '🎯 Sales & Leads',
+    icon: '🎯',
+    useCases: [
+      { text: 'Autonomous leadgen via Google Maps + X API, personalized outreach', user: 'Clawburt', likes: 0 },
+      { text: 'Finding leads on Reddit, adding to Notion', user: 'tinkerersanky', likes: 3 },
+      { text: 'Lead gen for ICP — no more n8n', user: 'brandontan', likes: 0 },
+      { text: 'Highly targeted lead gen', user: 'radwanrahmann', likes: 0 },
+      { text: 'Daily client outreach automation', user: 'vatsalcodesit', likes: 0 },
+      { text: 'Marketing: Apollo campaigns in Obsidian, human-in-loop', user: 'VenkatBalakumar', likes: 0 },
     ],
   },
   {
     id: 'productivity',
-    name: '📋 Productivity & Planning',
-    mentions: 14,
-    description: 'Daily briefs, task management, calendar, accountability',
-    quotes: [
-      { user: 'AdmiralMMI', text: "Daily planning, task decomposition, research briefings, keeping long-running projects logical without re-explaining context.", likes: 5 },
-      { user: 'ShipnDev', text: "Out of the box, it's a phenomenal accountability partner. It will follow up with you multiple times per day.", likes: 0 },
-      { user: 'Daniil_239', text: "basically it became like an OS for me, helping me plan the day, prioritize tasks, actually doing tasks for me sometimes.", likes: 0 },
+    name: '📋 Productivity',
+    icon: '📋',
+    useCases: [
+      { text: 'Daily planning, task decomposition, keeping projects logical without re-explaining', user: 'AdmiralMMI', likes: 5 },
+      { text: 'Accountability partner: follows up on goals multiple times per day', user: 'ShipnDev', likes: 0 },
+      { text: 'Like an OS: plan the day, prioritize tasks, do tasks, brainstorm', user: 'Daniil_239', likes: 0 },
+      { text: 'Meeting notes → Asana to-do → tag delegations', user: 'spark3hl', likes: 0 },
+      { text: 'Remind of important deliverables', user: 'AshExplained', likes: 0 },
+      { text: 'Chief of staff: morning briefs, newsletter digest, 15 yrs of notes searchable', user: 'BrianRWagner', likes: 0 },
     ],
   },
   {
     id: 'finance',
     name: '💰 Finance & Trading',
-    mentions: 10,
-    description: 'Trading, accounting, invoices, investment analysis',
-    quotes: [
-      { user: 'gripe1918', text: "I just connected it to futures trading", likes: 1 },
-      { user: 'darrylsj', text: "Sending me weekly recommendations for selling covered calls on stock at best price points and an update on Theta decay.", likes: 0 },
-      { user: 'BobWassermann', text: "Once a month it does my accounting (using fetched receipts), calculating kms driven for tax purposes.", likes: 5 },
-      { user: 'LarsPeh', text: "surveillance part for our fund. Used for various surveillance and suggestions for rebalancing.", likes: 0 },
+    icon: '💰',
+    useCases: [
+      { text: 'Connected to futures trading', user: 'gripe1918', likes: 1 },
+      { text: 'Weekly covered call recommendations, daily Theta decay updates', user: 'darrylsj', likes: 0 },
+      { text: 'Monthly accounting with auto-fetched receipts, km tracking for taxes', user: 'BobWassermann', likes: 5 },
+      { text: 'Investment fund surveillance, rebalancing suggestions', user: 'LarsPeh', likes: 0 },
+      { text: 'Trading bot control', user: 'childishludino', likes: 0 },
+      { text: 'Traded up a wallet 22% in 2 days', user: 'vicky_dyor', likes: 1 },
     ],
   },
   {
     id: 'research',
-    name: '🔬 Research & Analysis',
-    mentions: 11,
-    description: 'Market research, competitor analysis, data crunching',
-    quotes: [
-      { user: 'theRohitDas', text: "searches youtube, gets transcript, tracks latest videos. 'Every day at 8, send me interesting bits from my favourite channels'", likes: 56 },
-      { user: 'AdilMouja', text: "Curating news from HN, GitHub, and AI blogs, and posting the best resources to my website.", likes: 3 },
-      { user: 'J_dev363', text: "Current use cases for me is doing Market Research and validating ideas.", likes: 1 },
+    name: '🔬 Research',
+    icon: '🔬',
+    useCases: [
+      { text: 'YouTube: searches, transcripts, daily digest from favorite channels', user: 'theRohitDas', likes: 56 },
+      { text: 'Curates news from HN, GitHub, AI blogs → posts to website', user: 'AdilMouja', likes: 3 },
+      { text: 'Market research and idea validation for building a business', user: 'J_dev363', likes: 1 },
+      { text: 'Knowledge work: context files auto-update nightly, voice notes transcribed', user: 'LeoSellem', likes: 0 },
+      { text: 'Competitor/market research, morning AI/agents space news', user: 'agenticskills', likes: 0 },
+      { text: 'Trends on X, LinkedIn for viral topics', user: 'NandaKishoreHT', likes: 0 },
     ],
   },
   {
     id: 'multi-agent',
-    name: '🤖 Multi-Agent Teams',
-    mentions: 8,
-    description: 'Running agent teams, delegation, orchestration',
-    quotes: [
-      { user: 'UncleJAI', text: "Running a 5-agent team: main agent handles daily tasks, lead does project management, data agent crunches numbers, writer drafts content, coder ships features.", likes: 0 },
-      { user: 'ykgup', text: "3 sub-agents running demand mapping, pipeline audit, and research simultaneously while you sleep is the unlock", likes: 0 },
-      { user: 'xSoloTrades', text: "Set up 10 servers, each with its own instance. Going to make my own swarm where each agent passes tasks to each other.", likes: 0 },
+    name: '🤖 Multi-Agent',
+    icon: '🤖',
+    useCases: [
+      { text: '5-agent team: daily tasks, project management, data, writer, coder', user: 'UncleJAI', likes: 0 },
+      { text: '3 sub-agents: demand mapping, pipeline audit, research — runs while you sleep', user: 'ykgup', likes: 0 },
+      { text: '10 servers, each with own instance, building agent swarm', user: 'xSoloTrades', likes: 0 },
+      { text: 'Fleet of OpenClaws running agentic coating flywheel', user: 'telecasterrok', likes: 1 },
+      { text: 'Manage a fleet of agents that run @doodlestein', user: 'telecasterrok', likes: 1 },
     ],
   },
   {
     id: 'ecommerce',
-    name: '🛒 E-commerce & CRO',
-    mentions: 5,
-    description: 'Conversion optimization, ads, e-commerce operations',
-    quotes: [
-      { user: 'josephepstein', text: "CRO on my e-commerce website. I've gotten my CPA down from $26 to $11 on Meta this past month. Will add over $1M in sales this year.", likes: 15 },
-      { user: 'DMOGeek', text: "Reviewing ad creative", likes: 0 },
+    name: '🛒 E-commerce',
+    icon: '🛒',
+    useCases: [
+      { text: 'CRO: CPA from $26 to $11 on Meta, will add $1M+ in sales this year', user: 'josephepstein', likes: 15 },
+      { text: 'Reviewing ad creative', user: 'DMOGeek', likes: 0 },
+      { text: 'Building funnels', user: 'edbutlerx', likes: 0 },
+    ],
+  },
+  {
+    id: 'personal',
+    name: '🏠 Personal',
+    icon: '🏠',
+    useCases: [
+      { text: 'Raspberry Pi home automation + personal cloud storage', user: 'soikat', likes: 1 },
+      { text: 'Notion + Obsidian integration, updates docs/calendar/tasks on command', user: 'YishaiBack', likes: 0 },
+      { text: 'Programmed to call back telemarketers at night 😈', user: 'HambrechtJason', likes: 0 },
+      { text: 'Custom chess opening repertoire builder', user: 'Zenchess', likes: 0 },
+      { text: 'Running a litigation practice: "you have a motion due tomorrow, should I draft it?"', user: 'sxcpconan', likes: 1 },
     ],
   },
 ]
@@ -228,9 +255,10 @@ const severityColors = {
 }
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState('pain')
+  const [activeTab, setActiveTab] = useState('usecases')
   const [selectedItem, setSelectedItem] = useState(null)
   const [sortBy, setSortBy] = useState('mentions')
+  const [hoveredUseCase, setHoveredUseCase] = useState(null)
 
   const sortedPainThemes = [...painThemes].sort((a, b) => {
     if (sortBy === 'mentions') return b.mentions - a.mentions
@@ -241,20 +269,17 @@ export default function Home() {
     return 0
   })
 
-  const sortedUseCases = [...useCaseCategories].sort((a, b) => b.mentions - a.mentions)
-
   const totalPainMentions = painThemes.reduce((acc, t) => acc + t.mentions, 0)
-  const totalUseCaseMentions = useCaseCategories.reduce((acc, t) => acc + t.mentions, 0)
 
   return (
     <main style={{ padding: '40px 20px', maxWidth: '1200px', margin: '0 auto' }}>
       {/* Header */}
       <header style={{ marginBottom: '32px' }}>
         <h1 style={{ fontSize: '2.5rem', fontWeight: 800, marginBottom: '8px' }}>
-          🦞 OpenClaw Feedback Analysis
+          🦞 OpenClaw Feedback
         </h1>
         <p style={{ color: '#888', fontSize: '1.1rem' }}>
-          Community feedback from{' '}
+          Community insights from{' '}
           <a href="https://x.com/rileybrown" target="_blank" style={{ color: '#1d9bf0' }}>@rileybrown</a>'s threads
         </p>
       </header>
@@ -262,8 +287,8 @@ export default function Home() {
       {/* Tabs */}
       <div style={{ display: 'flex', gap: '8px', marginBottom: '32px' }}>
         {[
-          { id: 'pain', label: '😤 Pain Points', count: '56 replies' },
-          { id: 'usecases', label: '🚀 Use Cases', count: '142 replies' },
+          { id: 'usecases', label: '🚀 Use Cases', subtitle: 'What people build' },
+          { id: 'pain', label: '😤 Pain Points', subtitle: 'What needs fixing' },
         ].map((tab) => (
           <button
             key={tab.id}
@@ -277,15 +302,85 @@ export default function Home() {
               cursor: 'pointer',
               fontSize: '1rem',
               fontWeight: 600,
+              textAlign: 'left',
             }}
           >
             {tab.label}
-            <span style={{ display: 'block', fontSize: '0.8rem', fontWeight: 400, marginTop: '4px', opacity: 0.7 }}>
-              {tab.count}
+            <span style={{ display: 'block', fontSize: '0.8rem', fontWeight: 400, marginTop: '2px', opacity: 0.7 }}>
+              {tab.subtitle}
             </span>
           </button>
         ))}
       </div>
+
+      {/* Use Cases Tab */}
+      {activeTab === 'usecases' && (
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
+          {useCaseCategories.map((category) => (
+            <div key={category.id}>
+              <h2 style={{ 
+                fontSize: '1.4rem', 
+                fontWeight: 700, 
+                marginBottom: '16px',
+                color: '#fff',
+              }}>
+                {category.name}
+              </h2>
+              <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+                gap: '12px',
+              }}>
+                {category.useCases.map((uc, idx) => (
+                  <div
+                    key={idx}
+                    onMouseEnter={() => setHoveredUseCase(`${category.id}-${idx}`)}
+                    onMouseLeave={() => setHoveredUseCase(null)}
+                    style={{
+                      background: '#12121a',
+                      borderRadius: '12px',
+                      padding: '16px',
+                      border: '1px solid #2a2a3a',
+                      position: 'relative',
+                      transition: 'all 0.2s ease',
+                      transform: hoveredUseCase === `${category.id}-${idx}` ? 'translateY(-2px)' : 'none',
+                      boxShadow: hoveredUseCase === `${category.id}-${idx}` ? '0 8px 24px rgba(0,0,0,0.3)' : 'none',
+                    }}
+                  >
+                    <p style={{ 
+                      fontSize: '0.95rem', 
+                      lineHeight: 1.5, 
+                      color: '#ddd',
+                      marginBottom: '12px',
+                    }}>
+                      {uc.text}
+                    </p>
+                    <div style={{ 
+                      display: 'flex', 
+                      justifyContent: 'space-between', 
+                      alignItems: 'center',
+                      opacity: hoveredUseCase === `${category.id}-${idx}` ? 1 : 0.5,
+                      transition: 'opacity 0.2s ease',
+                    }}>
+                      <a 
+                        href={`https://x.com/${uc.user}`} 
+                        target="_blank" 
+                        style={{ color: '#1d9bf0', fontSize: '0.85rem', textDecoration: 'none' }}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        @{uc.user}
+                      </a>
+                      {uc.likes > 0 && (
+                        <span style={{ color: '#666', fontSize: '0.85rem' }}>❤️ {uc.likes}</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Pain Points Tab */}
       {activeTab === 'pain' && (
@@ -408,95 +503,12 @@ export default function Home() {
         </>
       )}
 
-      {/* Use Cases Tab */}
-      {activeTab === 'usecases' && (
-        <>
-          {/* Stats */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))',
-            gap: '16px',
-            marginBottom: '24px',
-          }}>
-            <div style={{ background: '#12121a', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '1.8rem', fontWeight: 700, color: '#4ade80' }}>{totalUseCaseMentions}</div>
-              <div style={{ color: '#666', fontSize: '0.85rem' }}>Total Mentions</div>
-            </div>
-            <div style={{ background: '#12121a', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '1.8rem', fontWeight: 700, color: '#60a5fa' }}>{useCaseCategories.length}</div>
-              <div style={{ color: '#666', fontSize: '0.85rem' }}>Categories</div>
-            </div>
-            <div style={{ background: '#12121a', borderRadius: '12px', padding: '16px', textAlign: 'center' }}>
-              <div style={{ fontSize: '1.8rem', fontWeight: 700, color: '#fbbf24' }}>142</div>
-              <div style={{ color: '#666', fontSize: '0.85rem' }}>Replies</div>
-            </div>
-          </div>
-
-          {/* Use Cases Table */}
-          <div style={{ background: '#12121a', borderRadius: '16px', overflow: 'hidden' }}>
-            <table style={{ width: '100%', borderCollapse: 'collapse' }}>
-              <thead>
-                <tr style={{ borderBottom: '1px solid #2a2a3a' }}>
-                  <th style={{ padding: '14px 16px', textAlign: 'left', color: '#666', fontWeight: 500, fontSize: '0.9rem' }}>Category</th>
-                  <th style={{ padding: '14px 16px', textAlign: 'center', color: '#666', fontWeight: 500, fontSize: '0.9rem', width: '80px' }}>Mentions</th>
-                  <th style={{ padding: '14px 16px', textAlign: 'left', color: '#666', fontWeight: 500, fontSize: '0.9rem' }}>Description</th>
-                </tr>
-              </thead>
-              <tbody>
-                {sortedUseCases.map((uc, idx) => {
-                  const isSelected = selectedItem === uc.id
-                  return (
-                    <tr
-                      key={uc.id}
-                      onClick={() => setSelectedItem(isSelected ? null : uc.id)}
-                      style={{
-                        borderBottom: idx < sortedUseCases.length - 1 ? '1px solid #1a1a2a' : 'none',
-                        background: isSelected ? '#1a1a2a' : 'transparent',
-                        cursor: 'pointer',
-                      }}
-                    >
-                      <td style={{ padding: '14px 16px', fontWeight: 600, fontSize: '0.95rem' }}>{uc.name}</td>
-                      <td style={{ padding: '14px 16px', textAlign: 'center' }}>
-                        <span style={{ background: '#4ade8030', color: '#4ade80', padding: '4px 10px', borderRadius: '16px', fontWeight: 600, fontSize: '0.85rem' }}>
-                          {uc.mentions}
-                        </span>
-                      </td>
-                      <td style={{ padding: '14px 16px', color: '#aaa', fontSize: '0.9rem' }}>{uc.description}</td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-
-          {/* Selected Use Case Quotes */}
-          {selectedItem && useCaseCategories.find(t => t.id === selectedItem) && (
-            <div style={{ marginTop: '20px', background: '#12121a', borderRadius: '16px', padding: '20px' }}>
-              <h3 style={{ marginBottom: '16px', color: '#fff', fontSize: '1.1rem' }}>
-                💬 {useCaseCategories.find(t => t.id === selectedItem)?.name}
-              </h3>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-                {useCaseCategories.find(t => t.id === selectedItem)?.quotes.map((q, i) => (
-                  <div key={i} style={{ background: '#1a1a2a', borderRadius: '10px', padding: '14px', borderLeft: '3px solid #4ade80' }}>
-                    <p style={{ marginBottom: '8px', lineHeight: 1.5, fontSize: '0.95rem' }}>"{q.text}"</p>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', color: '#666', fontSize: '0.85rem' }}>
-                      <a href={`https://x.com/${q.user}`} target="_blank" style={{ color: '#1d9bf0' }}>@{q.user}</a>
-                      <span>❤️ {q.likes}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </>
-      )}
-
       {/* Footer */}
       <footer style={{ marginTop: '60px', textAlign: 'center', color: '#666', fontSize: '0.9rem' }}>
         <p>
           Analysis by{' '}
           <a href="https://x.com/avareed_1994" target="_blank" style={{ color: '#ff6b6b' }}>Ava Reed</a>
-          {' '}• Data from Feb 5, 2026
+          {' '}• Feb 5, 2026
         </p>
       </footer>
     </main>
